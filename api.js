@@ -76,10 +76,10 @@ function load_frontpage(){
     });
 }
 function setup_auth_workflow(){
-    set_auth(base_url,login_url);
-    $('#user').show();
-    load_task_history(user_task_url);
-    showDA_tasks();
+    //set_auth(base_url,login_url);
+    //$('#user').show();
+    //load_task_history(user_task_url);
+    //showDA_tasks();
     $('.tr-result').hide() 
     //Load Inital Parameters
     load_workflow(data);
@@ -465,3 +465,21 @@ function getCookie(name) {
     }
     return cookieValue;
 }
+
+       
+        function mycheck(myid,min,max){
+        	$var=myid
+        	//alert($var)
+        	$min=min
+        	$max=max
+        	$var1=document.getElementById($var).value
+			if(($var1>$min) && ($var1<$max)){
+				
+			}
+    		else{
+    			alert('the value is not in the range ')
+    			$var1=$min
+    		}
+        	}
+        	
+        

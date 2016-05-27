@@ -1,3 +1,4 @@
+        
         <form id="parameters" class="form-stacked">
             <fieldset>
             <div class="col-sm-3.5" style="float:left">
@@ -9,33 +10,43 @@
                     <label for="longitude"> Longitude </label>
                     <input type="longitude" name="longitude" class="form-control input-sm" id="longitude" value="{{ longitude }}">
                 </div>
+    <!--First task start########################################### -->
 		<div class="form-group">
-                    <label for="wsmax"> Maximum soil water (wsmax) </label>
-                    <input type="wsmax"  name="wsmax" class="form-control input-sm" id="wsmax" value="{{ wsmax }}">
-                    <div class="form-inline da_param" >
-                        <label><input class="form-control input-sm da_param_wd da_chkbx" type="checkbox" name="da_wsmax" value="{{da_wsmax}}" disabled="disabled"></label>
-                        <label class="da_param_lb"> DA  Min<input class="form-control input-sm da_param_wd" type="text" name="min_wsmax" value="{{ min_wsmax}}" disabled="disabled"></label>
-                        <label class="da_param_lb">Max<input class="form-control input-sm da_param_wd" type="text" name="max_wsmax" value="{{ max_wsmax}}" disabled="disabled"></label>
-                    </div>
+        <label for="wsmax"> Maximum soil water (wsmax) </label>
+<input type="wsmax"  name="wsmax" class="form-control input-sm" id="wsmax" onchange="mycheck(this.id,50,60)" value="{{ wsmax }}">
+        <div class="sundi" >
+        <label><input class="sundi2" type="checkbox" name="da_wsmax" 
+                 value="{{da_wsmax}}" disabled="disabled"></label>
+    	<label class="da_param_lb"> DA  Min<input class="sundi2" type="text"
+    	         name="min_wsmax" value="{{ min_wsmax}}" disabled="disabled"></label>
+        <label class="da_param_lb">Max<input class="sundi2" type="text" 
+                 name="max_wsmax" value="{{ max_wsmax}}" disabled="disabled"></label>
+        </div>
+    <!--First task end########################################### -->
+    
+    <!--Second task start ################################################################# -->
                 </div>
 		<div class="form-group form-stacked" style="clear:both;">
                     <label for="wsmin"> Minimum soil water (wsmin) </label>
-                    <input type="wsmin" name="wsmin" class="form-control input-sm" id="wsmin" value="{{ wsmin }}">
+<input type="wsmin" name="wsmin" class="form-control input-sm" id="wsmin" onchange="mycheck(this.id,2,3)" value="{{ wsmin }}">
                     <div class="form-inline da_param" >
                         <label ><input class="form-control input-sm da_param_wd da_chkbx" type="checkbox" name="da_wsmin " value="{{da_wsmin}}" disabled="disabled"></label>
                         <label class="da_param_lb" >DA Min<input class="form-control input-sm da_param_wd" type="text" name="min_wsmin" value="{{min_wsmin}}" disabled="disabled"></label>
                         <label class="da_param_lb">Max<input class="form-control input-sm da_param_wd" type="text" name="max_wsmin" value="{{max_wsmin}}" disabled="disabled"></label>
                     </div>
                 </div>
+             <!--Second task end########################################### -->    
+             <!--3rd task start #################################################### -->   
 		<div class="form-group form-stacked" style="clear:both;">
                     <label for="LAIMAX"> Maximum Leaf Area Index (LAIMAX) </label>
-                    <input type="LAIMAX" name="LAIMAX" class="form-control input-sm" id="LAIMAX" value="{{ LAIMAX }}">
+                    <input type="LAIMAX" name="LAIMAX" class="form-control input-sm" id="LAIMAX" onchange="mycheck(this.id,0.2,0.3)"  value="{{ LAIMAX }}">
                     <div class="form-inline da_param" >
                         <label ><input class="form-control input-sm da_param_wd da_chkbx" type="checkbox" name="da_LAIMAX" value="{{da_LAIMAX}}" disabled="disabled"></label>
                         <label class="da_param_lb" >DA Min<input class="form-control input-sm da_param_wd" type="text" name="min_LAIMAX" value="{{min_LAIMAX}}" disabled="disabled"></label>
                         <label class="da_param_lb">Max<input class="form-control input-sm da_param_wd" type="text" name="max_LAIMAX" value="{{max_LAIMAX}}" disabled="disabled"></label>
                     </div>
                 </div>
+              <!--3rd task end########################################### -->    
 		<div class="form-group form-stacked" style="clear:both;">
                     <label for="LAIMIN"> Minimum Leaf Area Index (LAIMIN) </label>
                     <input type="LAIMIN" name="LAIMIN" class="form-control input-sm" id="LAIMIN" value="{{ LAIMIN }}">
